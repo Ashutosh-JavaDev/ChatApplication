@@ -25,7 +25,9 @@ public class Whatsapp extends JFrame implements ActionListener {
         image.setBounds(5,20,25,25);
         green.add(image);
         image.addMouseListener(new MouseAdapter() {
-            
+            public void addMouseListener(MouseAdapter ae){
+                System.exit(0);
+            }
         });
         // TextField
         text = new JTextField();
