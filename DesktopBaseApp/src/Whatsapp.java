@@ -43,6 +43,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         // Default setup
         setTitle("Whatsapp");
         setLayout(null);
+        setUndecorated(true);
         setSize(400, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(35, 50);
