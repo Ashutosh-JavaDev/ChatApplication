@@ -10,14 +10,15 @@ public class Whatsapp extends JFrame {
     public Whatsapp() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
-        green.setBounds(0, 0, 400, 60);
+        green.setBounds(0,0, 400, 60);
+        green.setLayout(null);
         add(green);
         // Image
         ImageIcon back=new ImageIcon(ClassLoader.getSystemResource("icons/three.png"));
         Image i1=back.getImage().getScaledInstance(25,25, Image.SCALE_DEFAULT);
         ImageIcon i2=new ImageIcon(i1);
         JLabel image=new JLabel(i2);
-        image.setBounds(0,10,25,25);
+        image.setBounds(100,20,25,25);
         green.add(image);
         
         // TextField
