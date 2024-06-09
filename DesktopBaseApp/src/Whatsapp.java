@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Image;
 
 import javax.swing.*;
 
@@ -7,8 +8,10 @@ public class Whatsapp extends JFrame {
     JTextField text;
 
     public Whatsapp() {
-        // ImageIcon back=new ImageIcon(ClassLoader.getSource);
-        // Image i1=back.getImage().
+        ImageIcon back=new ImageIcon(ClassLoader.getSystemResource("icons/3.png"));
+        Image i1=back.getImage().getScaledInstance(5, 10, Image.SCALE_DEFAULT);
+        ImageIcon i2=new ImageIcon(i1);
+        JLabel image=new JLabel(i2);
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
         green.setBounds(0, 0, 400, 60);
