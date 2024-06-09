@@ -7,6 +7,8 @@ public class Whatsapp extends JFrame {
     JTextField text;
 
     public Whatsapp() {
+        // ImageIcon back=new ImageIcon(ClassLoader.getSource);
+        // Image i1=back.getImage().
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
         green.setBounds(0, 0, 400, 60);
