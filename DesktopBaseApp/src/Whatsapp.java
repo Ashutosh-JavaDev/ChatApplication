@@ -17,7 +17,7 @@ public class Whatsapp extends JFrame {
         Image i1=back.getImage().getScaledInstance(25,25, Image.SCALE_DEFAULT);
         ImageIcon i2=new ImageIcon(i1);
         JLabel image=new JLabel(i2);
-        image.setBounds(5,10,25,25);
+        image.setBounds(0,10,25,25);
         green.add(image);
         
         // TextField
