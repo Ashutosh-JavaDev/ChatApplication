@@ -4,6 +4,7 @@ import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 import javax.swing.*;
 
@@ -25,7 +26,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         image.setBounds(5,20,25,25);
         green.add(image);
         image.addMouseListener(new MouseAdapter() {
-            public void addMouseListener(MouseAdapter ae){
+            public void mouseClicked(MouseEvent ae){
                 System.exit(0);
             }
         });
