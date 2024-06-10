@@ -31,12 +31,12 @@ public class Whatsapp extends JFrame implements ActionListener {
             }
         });
         // Video logo
-        ImageIcon back = new ImageIcon(ClassLoader.getSystemResource("icons/three.png"));
-        Image i1 = back.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
-        ImageIcon i2 = new ImageIcon(i1);
-        JLabel image = new JLabel(i2);
+        ImageIcon video = new ImageIcon(ClassLoader.getSystemResource("icons/three.png"));
+        Image i3 = video.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
+        ImageIcon i4 = new ImageIcon(i3);
+        JLabel videoImage = new JLabel(i4);
         image.setBounds(5, 20, 25, 25);
-        green.add(image);
+        green.add(videoImage);
         // TextField
         text = new JTextField();
         text.setBounds(10, 560, 270, 30);
