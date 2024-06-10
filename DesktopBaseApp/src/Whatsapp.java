@@ -53,7 +53,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         iconImage.setBounds(375, 20, 15, 25);
         green.add(iconImage);
            // user1
-           ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
+           ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/gaitonde.png"));
            Image i9 = user1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
            ImageIcon i10 = new ImageIcon(i9);
            JLabel user1Image = new JLabel(i10);
