@@ -66,6 +66,11 @@ public class Whatsapp extends JFrame implements ActionListener {
         gaitonde.setForeground(Color.white);
         gaitonde.setFont(new Font("system",Font.PLAIN,16));
         green.add(gaitonde);
+        JLabel status=new JLabel("Active now");
+        status.setBounds(100,40,100,20);
+        status.setForeground(Color.white);
+        status.setFont(new Font("system",Font.PLAIN,13));
+        green.add(status);
         // TextField
         text = new JTextField();
         text.setBounds(10, 560, 270, 30);
