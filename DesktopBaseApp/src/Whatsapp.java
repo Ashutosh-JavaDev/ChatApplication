@@ -1,4 +1,5 @@
 import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.MouseListener;
 import java.awt.event.ActionEvent;
@@ -30,7 +31,7 @@ public class Whatsapp extends JFrame implements ActionListener {
                 System.exit(0);
             }
         });
-     
+
         // Video logo
         ImageIcon video = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
         Image i3 = video.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
@@ -52,13 +53,19 @@ public class Whatsapp extends JFrame implements ActionListener {
         JLabel iconImage = new JLabel(i8);
         iconImage.setBounds(375, 20, 15, 25);
         green.add(iconImage);
-           // user1
-           ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/Gaitonde.png"));
-           Image i9 = user1.getImage().getScaledInstance(40, 40, Image.SCALE_DEFAULT);
-           ImageIcon i10 = new ImageIcon(i9);
-           JLabel user1Image = new JLabel(i10);
-           user1Image.setBounds(50,10,40,40);
-           green.add(user1Image);
+        // user1
+        ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/Gaitonde.png"));
+        Image i9 = user1.getImage().getScaledInstance(40, 40, Image.SCALE_DEFAULT);
+        ImageIcon i10 = new ImageIcon(i9);
+        JLabel user1Image = new JLabel(i10);
+        user1Image.setBounds(50, 10, 40, 40);
+        green.add(user1Image);
+        // Name
+        JLabel gaitonde=new JLabel("Gaitonde");
+        gaitonde.setBounds(100,10,100,20);
+        gaitonde.setForeground(Color.white);
+        gaitonde.setFont(new Font("system",Font.PLAIN,16));
+        green.add(gaitonde);
         // TextField
         text = new JTextField();
         text.setBounds(10, 560, 270, 30);
@@ -75,7 +82,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         setUndecorated(true);
         setSize(400, 600);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(300,150);
+        setLocation(300, 150);
         setVisible(true);
     }
 
