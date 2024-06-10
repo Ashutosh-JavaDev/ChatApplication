@@ -31,7 +31,7 @@ public class Whatsapp extends JFrame implements ActionListener {
             }
         });
         // Video logo
-        ImageIcon video = new ImageIcon(ClassLoader.getSystemResource("icons/three.png"));
+        ImageIcon video = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
         Image i3 = video.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon i4 = new ImageIcon(i3);
         JLabel videoImage = new JLabel(i4);
