@@ -62,12 +62,12 @@ public class Whatsapp extends JFrame implements ActionListener {
         green.add(user1Image);
         // Name
         JLabel gaitonde=new JLabel("Gaitonde");
-        gaitonde.setBounds(100,10,100,20);
+        gaitonde.setBounds(150,10,100,20);
         gaitonde.setForeground(Color.white);
         gaitonde.setFont(new Font("system",Font.PLAIN,16));
         green.add(gaitonde);
         JLabel status=new JLabel("Active now");
-        status.setBounds(100,40,100,20);
+        status.setBounds(150,40,100,20);
         status.setForeground(Color.white);
         status.setFont(new Font("system",Font.PLAIN,13));
         green.add(status);
