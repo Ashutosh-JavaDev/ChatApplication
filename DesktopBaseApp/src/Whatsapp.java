@@ -35,7 +35,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         Image i3 = video.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon i4 = new ImageIcon(i3);
         JLabel videoImage = new JLabel(i4);
-        image.setBounds(5, 20, 25, 25);
+        videoImage.setBounds(5, 20, 25, 25);
         green.add(videoImage);
         // TextField
         text = new JTextField();
