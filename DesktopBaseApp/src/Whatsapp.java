@@ -16,7 +16,7 @@ public class Whatsapp extends JFrame implements ActionListener {
     public Whatsapp() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
-        green.setBounds(0, 0, 400, 60);
+        green.setBounds(0, 0, 450,60);
         green.setLayout(null);
         add(green);
         // Image
@@ -73,16 +73,16 @@ public class Whatsapp extends JFrame implements ActionListener {
         green.add(status);
         // Panel
         JPanel textPanel=new JPanel();
-        textPanel.setBounds(2,65,398,550);
+        textPanel.setBounds(5,75,440,570);
         textPanel.setLayout(null);
         add(textPanel);
         // TextField
         text = new JTextField();
-        text.setBounds(10, 560, 270, 30);
+        text.setBounds(5,655, 310,40);
         add(text);
         // Button
         send = new JButton("Send");
-        send.setBounds(285, 560, 100, 30);
+        send.setBounds(285, 560, 100,30);
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
         add(send);
@@ -90,7 +90,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         setTitle("Whatsapp");
         setLayout(null);
         setUndecorated(true);
-        setSize(400, 600);
+        setSize(450,700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(300, 150);
         setVisible(true);
