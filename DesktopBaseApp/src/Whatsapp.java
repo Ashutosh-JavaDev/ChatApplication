@@ -79,10 +79,11 @@ public class Whatsapp extends JFrame implements ActionListener {
         // TextField
         text = new JTextField();
         text.setBounds(5,655, 310,40);
+        text.setFont(new Font("SAN_SERIF", Font.BOLD,14));
         add(text);
         // Button
         send = new JButton("Send");
-        send.setBounds(285, 560, 100,30);
+        send.setBounds(325, 655,100,40);
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
         add(send);
