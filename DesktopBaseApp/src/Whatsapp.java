@@ -35,15 +35,22 @@ public class Whatsapp extends JFrame implements ActionListener {
         Image i3 = video.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon i4 = new ImageIcon(i3);
         JLabel videoImage = new JLabel(i4);
-        videoImage.setBounds(5, 20, 25, 25);
+        videoImage.setBounds(200, 20, 25, 25);
         green.add(videoImage);
         // Call
         ImageIcon call = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
         Image i5 = call.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon i6 = new ImageIcon(i5);
         JLabel callImage = new JLabel(i6);
-        callImage.setBounds(5, 20, 25, 25);
+        callImage.setBounds(235, 20, 25, 25);
         green.add(callImage);
+        // icon
+        ImageIcon icon = new ImageIcon(ClassLoader.getSystemResource("icons/video.png"));
+        Image i7 = icon.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
+        ImageIcon i8 = new ImageIcon(i7);
+        JLabel iconImage = new JLabel(i8);
+        iconImage.setBounds(270, 20, 25, 25);
+        green.add(iconImage);
         // TextField
         text = new JTextField();
         text.setBounds(10, 560, 270, 30);
