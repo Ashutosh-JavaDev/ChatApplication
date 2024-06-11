@@ -12,11 +12,12 @@ import javax.swing.*;
 public class Whatsapp extends JFrame implements ActionListener {
     JButton send;
     JTextField text;
+    JPanel textPanel;
 
     public Whatsapp() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
-        green.setBounds(0, 0, 450,60);
+        green.setBounds(0, 0, 450, 60);
         green.setLayout(null);
         add(green);
         // Image
@@ -61,29 +62,29 @@ public class Whatsapp extends JFrame implements ActionListener {
         user1Image.setBounds(50, 10, 40, 40);
         green.add(user1Image);
         // Name
-        JLabel gaitonde=new JLabel("Gaitonde");
-        gaitonde.setBounds(100,10,100,20);
+        JLabel gaitonde = new JLabel("Gaitonde");
+        gaitonde.setBounds(100, 10, 100, 20);
         gaitonde.setForeground(Color.white);
-        gaitonde.setFont(new Font("SAN_SERIF",Font.PLAIN,16));
+        gaitonde.setFont(new Font("SAN_SERIF", Font.PLAIN, 16));
         green.add(gaitonde);
-        JLabel status=new JLabel("Active now");
-        status.setBounds(100,33,100,20);
+        JLabel status = new JLabel("Active now");
+        status.setBounds(100, 33, 100, 20);
         status.setForeground(Color.white);
-        status.setFont(new Font("SAN_SERIF",Font.PLAIN,13));
+        status.setFont(new Font("SAN_SERIF", Font.PLAIN, 13));
         green.add(status);
         // Panel
-        JPanel textPanel=new JPanel();
-        textPanel.setBounds(5,75,440,570);
+        textPanel = new JPanel();
+        textPanel.setBounds(5, 75, 440, 570);
         textPanel.setLayout(null);
         add(textPanel);
         // TextField
         text = new JTextField();
-        text.setBounds(5,655, 310,40);
-        text.setFont(new Font("SAN_SERIF", Font.BOLD,14));
+        text.setBounds(5, 655, 310, 40);
+        text.setFont(new Font("SAN_SERIF", Font.BOLD, 14));
         add(text);
         // Button
         send = new JButton("Send");
-        send.setBounds(325, 655,100,40);
+        send.setBounds(325, 655, 100, 40);
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
         add(send);
@@ -92,7 +93,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         setTitle("Whatsapp");
         setLayout(null);
         setUndecorated(true);
-        setSize(450,700);
+        setSize(450, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setLocation(300, 150);
         setVisible(true);
@@ -100,11 +101,11 @@ public class Whatsapp extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        String textx=text.getText();
-        if(ae.getSource()==send){
-            textx="";
+        String textx = text.getText();
+        if (ae.getSource() == send) {
+            textx = "";
         }
-        
+
     }
 
     public static void main(String[] args) {
