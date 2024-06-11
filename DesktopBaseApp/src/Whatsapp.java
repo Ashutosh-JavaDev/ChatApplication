@@ -3,6 +3,8 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.MouseListener;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
@@ -111,6 +113,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         vertical.add(right);
         vertical.add(Box.createVerticalStrut(15));
         textPanel.add(vertical,BorderLayout.PAGE_START);
+        text.setText("");
         repaint();
         invalidate();
         validate();
@@ -123,6 +126,11 @@ public class Whatsapp extends JFrame implements ActionListener {
         output.setOpaque(true);
         output.setBorder(new EmptyBorder(15,15,15,50));
         output.setBackground(new Color(37,211,102));
+        Calendar cal=Calendar.getInstance();
+        SimpleDateFormat sdf=new SimpleDateFormat("HH:MM");
+        JLabel formet=new JLabel();
+        formet.setText(sdf.format(cal.getTime()));
+        panel.add(formet);
         panel.add(output);
         
         return panel;
