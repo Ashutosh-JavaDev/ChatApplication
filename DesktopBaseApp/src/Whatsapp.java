@@ -87,6 +87,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
         add(send);
+        send.addactionListener(this);
         // Default setup
         setTitle("Whatsapp");
         setLayout(null);
