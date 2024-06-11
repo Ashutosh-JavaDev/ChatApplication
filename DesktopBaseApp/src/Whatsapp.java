@@ -113,14 +113,14 @@ public class Whatsapp extends JFrame implements ActionListener {
         repaint();
         invalidate();
         validate();
-        vertical.setBackground(Color.green);
-         if (ae.getSource() == send) {
-            textx = "";
-        }
     }
     public static JPanel formatpanel(String textx){
         JPanel panel=new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        JLabel output=new JLabel(textx);
+        output.setFont(new Font("Tahoma",Font.BOLD,15));
+        output.setForeground(Color.white);
+        panel.add(output);
         
         return panel;
     }
