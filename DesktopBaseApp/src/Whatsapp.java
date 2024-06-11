@@ -113,7 +113,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         JPanel right=new JPanel(new BorderLayout());
         right.add(p2,BorderLayout.LINE_END);
         vertical.add(right);
-        vertical.add(Box.createHorizontalStrut(15));
+        vertical.add(Box.createVerticalStrut(15));
     }
 
     public static void main(String[] args) {
