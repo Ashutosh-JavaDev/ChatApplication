@@ -9,6 +9,7 @@ import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 
 public class Whatsapp extends JFrame implements ActionListener {
     JButton send;
@@ -120,6 +121,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         JLabel output=new JLabel(textx);
         output.setFont(new Font("Arial",Font.BOLD,15));
         output.setOpaque(true);
+        output.setBorder(new EmptyBorder(15,15,15,50));
         output.setBackground(new Color(37,211,102));
         panel.add(output);
         
