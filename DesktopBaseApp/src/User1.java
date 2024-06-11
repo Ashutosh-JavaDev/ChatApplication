@@ -13,12 +13,12 @@ import java.awt.event.MouseEvent;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class Whatsapp extends JFrame implements ActionListener {
+public class User1 extends JFrame implements ActionListener {
     JButton send;
     JTextField text;
     JPanel textPanel;
     Box vertical=Box.createVerticalBox();
-    public Whatsapp() {
+    public User1() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
         green.setBounds(0, 0, 450, 60);
@@ -137,6 +137,6 @@ public class Whatsapp extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        new Whatsapp();
+        new User1();
     }
 }
