@@ -118,8 +118,9 @@ public class Whatsapp extends JFrame implements ActionListener {
         JPanel panel=new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         JLabel output=new JLabel(textx);
-        output.setFont(new Font("Tahoma",Font.BOLD,15));
-        output.setForeground(Color.white);
+        output.setFont(new Font("Arial",Font.BOLD,15));
+        output.setOpaque(true);
+        output.setBackground(new Color(37,211,102));
         panel.add(output);
         
         return panel;
