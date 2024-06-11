@@ -127,7 +127,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         output.setBorder(new EmptyBorder(15,15,15,50));
         output.setBackground(new Color(37,211,102));
         Calendar cal=Calendar.getInstance();
-        SimpleDateFormat sdf=new SimpleDateFormat("HH:MM");
+        SimpleDateFormat sdf=new SimpleDateFormat("HH:mm");
         JLabel formet=new JLabel();
         formet.setText(sdf.format(cal.getTime()));
         panel.add(formet);
