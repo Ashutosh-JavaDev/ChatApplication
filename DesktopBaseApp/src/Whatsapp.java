@@ -115,6 +115,9 @@ public class Whatsapp extends JFrame implements ActionListener {
         vertical.add(right);
         vertical.add(Box.createVerticalStrut(15));
         textPanel.add(vertical,BorderLayout.PAGE_START);
+        repaint();
+        invalidate();
+        validate();
     }
 
     public static void main(String[] args) {
