@@ -99,7 +99,7 @@ public class User2 extends JFrame implements ActionListener {
         setUndecorated(true);
         setSize(450, 700);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(600, 150);
+        setLocation(900, 150);
         setVisible(true);
     }
 
