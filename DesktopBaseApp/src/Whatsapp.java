@@ -87,7 +87,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
         add(send);
-        send.addactionListener(this);
+        send.addActionListener(this);
         // Default setup
         setTitle("Whatsapp");
         setLayout(null);
@@ -100,7 +100,10 @@ public class Whatsapp extends JFrame implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-
+        String textx=text.getText();
+        if(ae.getSource()==send){
+            
+        }
     }
 
     public static void main(String[] args) {
