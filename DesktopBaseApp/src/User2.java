@@ -59,14 +59,14 @@ public class User2 extends JFrame implements ActionListener {
         iconImage.setBounds(375, 20, 15, 25);
         green.add(iconImage);
         // user1
-        ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/Gaitonde.png"));
+        ImageIcon user1 = new ImageIcon(ClassLoader.getSystemResource("icons/Bunty.png"));
         Image i9 = user1.getImage().getScaledInstance(40, 40, Image.SCALE_DEFAULT);
         ImageIcon i10 = new ImageIcon(i9);
         JLabel user1Image = new JLabel(i10);
         user1Image.setBounds(50, 10, 40, 40);
         green.add(user1Image);
         // Name
-        JLabel gaitonde = new JLabel("Gaitonde");
+        JLabel gaitonde = new JLabel("Bunty");
         gaitonde.setBounds(100, 10, 100, 20);
         gaitonde.setForeground(Color.white);
         gaitonde.setFont(new Font("SAN_SERIF", Font.PLAIN, 16));
