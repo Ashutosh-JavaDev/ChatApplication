@@ -104,6 +104,7 @@ public class Whatsapp extends JFrame implements ActionListener {
         if(ae.getSource()==send){
             textx="";
         }
+        
     }
 
     public static void main(String[] args) {
