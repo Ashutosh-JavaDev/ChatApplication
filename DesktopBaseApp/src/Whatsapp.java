@@ -103,10 +103,7 @@ public class Whatsapp extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent ae) {
         String textx = text.getText();
-       
-        JLabel p1=new JLabel(textx);
-        JPanel p2=new JPanel();
-        p2.add(p1);
+        JPanel p2=formatpanel(textx);
         textPanel.setLayout(new BorderLayout());
         JPanel right=new JPanel(new BorderLayout());
         right.add(p2,BorderLayout.LINE_END);
@@ -120,6 +117,12 @@ public class Whatsapp extends JFrame implements ActionListener {
          if (ae.getSource() == send) {
             textx = "";
         }
+    }
+    public static JPanel formatpanel(String textx){
+        JPanel panel=new JPanel();
+        panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
+        
+        return panel;
     }
 
     public static void main(String[] args) {
