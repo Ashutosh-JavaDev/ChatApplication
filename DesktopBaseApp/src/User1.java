@@ -17,7 +17,7 @@ public class User1 extends JFrame implements ActionListener {
     JButton send;
     JTextField text;
     JPanel textPanel;
-    Box vertical=Box.createVerticalBox();
+  static  Box vertical=Box.createVerticalBox();
     public User1() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
