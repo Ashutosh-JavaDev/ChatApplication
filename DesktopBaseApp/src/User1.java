@@ -2,13 +2,15 @@ import java.awt.BorderLayout;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
-import java.awt.event.MouseListener;
+import java.net.ServerSocket;
+import java.rmi.ServerException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.io.IOException;
 
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
@@ -138,5 +140,11 @@ public class User1 extends JFrame implements ActionListener {
 
     public static void main(String[] args) {
         new User1();
+        try{
+            ServerSocket sk=new ServerSocket();
+        }
+        catch(IOException e){
+            e.printStackTrace();
+        }
     }
 }
