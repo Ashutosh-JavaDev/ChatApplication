@@ -150,6 +150,9 @@ public class User1 extends JFrame implements ActionListener {
                 Socket soc=sk.accept();
                 DataInputStream din=new DataInputStream(soc.getInputStream());
                 DataOutputStream dout=new DataOutputStream(soc.getOutputStream());
+                while(true){
+                    String msg=din.readUTF();
+                }
             }
         }
         catch(IOException e){
