@@ -4,7 +4,7 @@ import java.awt.Font;
 import java.awt.Image;
 import java.net.ServerSocket;
 import java.net.Socket;
-import java.rmi.ServerException;
+// import java.rmi.ServerException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.awt.event.ActionEvent;
@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.DataInputStream;
-import java.io.DataOutput;
+// import java.io.DataOutput;
 import java.io.DataOutputStream;
 import java.io.IOException;
 
