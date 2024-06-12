@@ -112,18 +112,24 @@ public class User2 implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        String textx = text.getText();
-        JPanel p2 = formatpanel(textx);
-        textPanel.setLayout(new BorderLayout());
-        JPanel right = new JPanel(new BorderLayout());
-        right.add(p2, BorderLayout.LINE_END);
-        vertical.add(right);
-        vertical.add(Box.createVerticalStrut(15));
-        textPanel.add(vertical, BorderLayout.PAGE_START);
-        text.setText("");
-        frame.repaint();
-        frame.invalidate();
-        frame.validate();
+   try{
+    String textx = text.getText();
+    JPanel p2 = formatpanel(textx);
+    textPanel.setLayout(new BorderLayout());
+    JPanel right = new JPanel(new BorderLayout());
+    right.add(p2, BorderLayout.LINE_END);
+    vertical.add(right);
+    vertical.add(Box.createVerticalStrut(15));
+    textPanel.add(vertical, BorderLayout.PAGE_START);
+    text.setText("");
+    dout.writeUTF(textx);
+    frame.repaint();
+    frame.invalidate();
+    frame.validate();
+   }
+   catch(IOException e){
+    e.printStackTrace();
+   }
     }
 
     public static JPanel formatpanel(String textx) {
