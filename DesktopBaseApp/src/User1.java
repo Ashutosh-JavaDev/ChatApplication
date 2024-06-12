@@ -3,6 +3,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.net.ServerSocket;
+import java.net.Socket;
 import java.rmi.ServerException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -141,7 +142,10 @@ public class User1 extends JFrame implements ActionListener {
     public static void main(String[] args) {
         new User1();
         try{
-            ServerSocket sk=new ServerSocket();
+            ServerSocket sk=new ServerSocket(6001);
+            while(true){
+                Socket soc=sk.accept();
+            }
         }
         catch(IOException e){
             e.printStackTrace();
