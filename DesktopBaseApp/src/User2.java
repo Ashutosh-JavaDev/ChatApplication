@@ -3,6 +3,10 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Image;
 import java.awt.event.MouseListener;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.awt.event.ActionEvent;
@@ -13,17 +17,19 @@ import java.awt.event.MouseEvent;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 
-public class User2 extends JFrame implements ActionListener {
+public class User2 implements ActionListener {
     JButton send;
     JTextField text;
     JPanel textPanel;
-    Box vertical=Box.createVerticalBox();
+    static  Box vertical = Box.createVerticalBox();
+    static DataOutputStream dout;
+    static JFrame frame=new JFrame();
     public User2() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
         green.setBounds(0, 0, 450, 60);
         green.setLayout(null);
-        add(green);
+        frame.add(green);
         // Image
         ImageIcon back = new ImageIcon(ClassLoader.getSystemResource("icons/three.png"));
         Image i1 = back.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
@@ -80,63 +86,72 @@ public class User2 extends JFrame implements ActionListener {
         textPanel = new JPanel();
         textPanel.setBounds(5, 75, 440, 570);
         textPanel.setLayout(null);
-        add(textPanel);
+        frame.add(textPanel);
         // TextField
         text = new JTextField();
         text.setBounds(5, 655, 310, 40);
         text.setFont(new Font("SAN_SERIF", Font.BOLD, 14));
-        add(text);
+        frame.add(text);
         // Button
         send = new JButton("Send");
         send.setBounds(325, 655, 100, 40);
         send.setBackground(new Color(3, 94, 3));
         send.setForeground(Color.white);
-        add(send);
+        frame.add(send);
         send.addActionListener(this);
         // Default setup
-        setTitle("Whatsapp");
-        setLayout(null);
-        setUndecorated(true);
-        setSize(450, 700);
-        setDefaultCloseOperation(EXIT_ON_CLOSE);
-        setLocation(900, 150);
-        setVisible(true);
+        frame.setTitle("Whatsapp");
+        frame.setLayout(null);
+        frame.setUndecorated(true);
+        frame.setSize(450, 700);
+        frame.setDefaultCloseOperation(frame.EXIT_ON_CLOSE);
+        frame.setLocation(900, 150);
+        frame.setVisible(true);
     }
 
     @Override
     public void actionPerformed(ActionEvent ae) {
         String textx = text.getText();
-        JPanel p2=formatpanel(textx);
+        JPanel p2 = formatpanel(textx);
         textPanel.setLayout(new BorderLayout());
-        JPanel right=new JPanel(new BorderLayout());
-        right.add(p2,BorderLayout.LINE_END);
+        JPanel right = new JPanel(new BorderLayout());
+        right.add(p2, BorderLayout.LINE_END);
         vertical.add(right);
         vertical.add(Box.createVerticalStrut(15));
-        textPanel.add(vertical,BorderLayout.PAGE_START);
+        textPanel.add(vertical, BorderLayout.PAGE_START);
         text.setText("");
-        repaint();
-        invalidate();
-        validate();
+        frame.repaint();
+        frame.invalidate();
+        frame.validate();
     }
-    public static JPanel formatpanel(String textx){
-        JPanel panel=new JPanel();
+
+    public static JPanel formatpanel(String textx) {
+        JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-        JLabel output=new JLabel(textx);
-        output.setFont(new Font("Arial",Font.BOLD,15));
+        JLabel output = new JLabel(textx);
+        output.setFont(new Font("Arial", Font.BOLD, 15));
         output.setOpaque(true);
-        output.setBorder(new EmptyBorder(15,15,15,50));
-        output.setBackground(new Color(37,211,102));
-        Calendar cal=Calendar.getInstance();
-        SimpleDateFormat sdf=new SimpleDateFormat("HH:mm");
-        JLabel formet=new JLabel();
+        output.setBorder(new EmptyBorder(15, 15, 15, 50));
+        output.setBackground(new Color(37, 211, 102));
+        Calendar cal = Calendar.getInstance();
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
+        JLabel formet = new JLabel();
         formet.setText(sdf.format(cal.getTime()));
         panel.add(formet);
         panel.add(output);
-        
+
         return panel;
     }
 
     public static void main(String[] args) {
         new User2();
+        try {
+            Socket s = new Socket("127.0.0.1", 6001);
+            DataInputStream din = new DataInputStream(s.getInputStream());
+            dout = new DataOutputStream(s.getOutputStream());
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
