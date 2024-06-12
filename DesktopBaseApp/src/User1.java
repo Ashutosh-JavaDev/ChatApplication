@@ -25,7 +25,7 @@ public class User1 implements ActionListener {
     JPanel textPanel;
     static JFrame frame = new JFrame();
     static Box vertical = Box.createVerticalBox();
-
+    static DataOutputStream dout ;
     public User1() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
@@ -152,7 +152,7 @@ public class User1 implements ActionListener {
             while (true) {
                 Socket soc = sk.accept();
                 DataInputStream din = new DataInputStream(soc.getInputStream());
-                DataOutputStream dout = new DataOutputStream(soc.getOutputStream());
+                dout = new DataOutputStream(soc.getOutputStream());
                 while (true) {
                     String msg = din.readUTF();
                     JPanel panel = formatpanel(msg);
