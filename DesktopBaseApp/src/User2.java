@@ -20,10 +20,11 @@ import javax.swing.border.EmptyBorder;
 public class User2 implements ActionListener {
     JButton send;
     JTextField text;
-    JPanel textPanel;
-    static  Box vertical = Box.createVerticalBox();
+    static JPanel textPanel;
+    static Box vertical = Box.createVerticalBox();
     static DataOutputStream dout;
-    static JFrame frame=new JFrame();
+    static JFrame frame = new JFrame();
+
     public User2() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
@@ -149,7 +150,17 @@ public class User2 implements ActionListener {
             Socket s = new Socket("127.0.0.1", 6001);
             DataInputStream din = new DataInputStream(s.getInputStream());
             dout = new DataOutputStream(s.getOutputStream());
-
+            while (true) {
+                textPanel.setLayout(new BorderLayout());
+                String msg = din.readUTF();
+                JPanel panel = formatpanel(msg);
+                JPanel left = new JPanel(new BorderLayout());
+                left.add(panel, BorderLayout.LINE_START);
+                vertical.add(left);
+                vertical.add(Box.createVerticalStrut(15));
+                textPanel.add(vertical,BorderLayout.PAGE_START);
+                frame.validate();
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
