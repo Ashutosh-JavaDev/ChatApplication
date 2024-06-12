@@ -152,6 +152,7 @@ public class User1 extends JFrame implements ActionListener {
                 DataOutputStream dout=new DataOutputStream(soc.getOutputStream());
                 while(true){
                     String msg=din.readUTF();
+                    JPanel panel=formatpanel(msg);
                 }
             }
         }
