@@ -25,7 +25,8 @@ public class User1 implements ActionListener {
     JPanel textPanel;
     static JFrame frame = new JFrame();
     static Box vertical = Box.createVerticalBox();
-    static DataOutputStream dout ;
+    static DataOutputStream dout;
+
     public User1() {
         JPanel green = new JPanel();
         green.setBackground(new Color(3, 94, 3));
@@ -113,18 +114,23 @@ public class User1 implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent ae) {
-        String textx = text.getText();
-        JPanel p2 = formatpanel(textx);
-        textPanel.setLayout(new BorderLayout());
-        JPanel right = new JPanel(new BorderLayout());
-        right.add(p2, BorderLayout.LINE_END);
-        vertical.add(right);
-        vertical.add(Box.createVerticalStrut(15));
-        textPanel.add(vertical, BorderLayout.PAGE_START);
-        text.setText("");
-        frame.repaint();
-        frame.invalidate();
-        frame.validate();
+        try {
+            String textx = text.getText();
+            JPanel p2 = formatpanel(textx);
+            textPanel.setLayout(new BorderLayout());
+            JPanel right = new JPanel(new BorderLayout());
+            right.add(p2, BorderLayout.LINE_END);
+            vertical.add(right);
+            vertical.add(Box.createVerticalStrut(15));
+            textPanel.add(vertical, BorderLayout.PAGE_START);
+            text.setText("");
+            dout.writeUTF(textx);
+            frame.repaint();
+            frame.invalidate();
+            frame.validate();
+        } catch (IOException se) {
+            se.printStackTrace();
+        }
     }
 
     public static JPanel formatpanel(String textx) {
