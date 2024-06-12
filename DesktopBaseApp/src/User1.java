@@ -153,6 +153,8 @@ public class User1 extends JFrame implements ActionListener {
                 while(true){
                     String msg=din.readUTF();
                     JPanel panel=formatpanel(msg);
+                    JPanel left=new JPanel(new BorderLayout());
+                    left.add(panel,BorderLayout.LINE_START);
                 }
             }
         }
